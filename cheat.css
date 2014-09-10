@@ -1,0 +1,61 @@
+header.sticky {
+  height: 65px;
+}
+
+header.sticky > .header.wrapper {
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+#floatingCheckout {
+  transform: scale(2);
+  transform-origin: top right;
+}
+
+.cc-filter-table td {
+  padding: 0 0.1em;
+  vertical-align: middle;
+}
+.cc-filter-table td:nth-child(2) {
+  padding: 0 1.6em 0 0.8em;
+}
+.cc-filter-table td:nth-child(3) {
+  min-width: 4em;
+}
+
+.cc-allow:link,
+.cc-allow:visited,
+.cc-allow:hover,
+.cc-allow:active {
+  color: #31ae5c;
+}
+
+
+.cc-ban:link,
+.cc-ban:visited,
+.cc-ban:hover,
+.cc-ban:active {
+  color: #f04e2c;
+}
+
+
+.cc-un-allow:link,
+.cc-un-allow:visited,
+.cc-un-allow:hover,
+.cc-un-allow:active,
+
+.cc-un-ban:link,
+.cc-un-ban:visited,
+.cc-un-ban:hover,
+.cc-un-ban:active {
+  color: #555;
+}
+
+.cc-un-allow::after {
+  display: inline;
+  content: 'ed';
+}
+.cc-un-ban::after {
+  display: inline;
+  content: 'ned';
+}

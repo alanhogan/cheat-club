@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Cheat Club",
+  "description": "Hack your Eat Club by filtering menu items.",
+  "version": "1.0.1",
+
+  "icons": {
+    "128": "cheat-club-logo-128.png",
+    "512": "cheat-club-logo-512.png"
+  },
+
+  "permissions": [
+    "https://*.myeatclub.com/",
+    "https://myeatclub.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.myeatclub.com/*"],
+      "css":     ["cheat.css"],
+      "js":      ["lib/jquery-2.1.1.min.js", "lib/lodash.js", "cheat.js"]
+    }
+  ],
+
+  "web_accessible_resources": ["cheat-logo.png"]
+}
