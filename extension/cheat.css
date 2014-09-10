@@ -61,3 +61,15 @@ header.sticky #floatingCheckout {
   display: inline;
   content: 'ned';
 }
+
+#cc-share {
+  position: relative;
+  top: -6px;
+  font-size: 13px;
+  width: 124px;
+  text-align: center;
+}
+
+#cc-share > a {
+  color: #f04e2c;
+}

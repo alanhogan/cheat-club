@@ -136,6 +136,10 @@ var setUpCheatClubForDayWhenReady = function() {
     // Change logo
     $('.logo-menu').attr('src', chrome.extension.getURL('cheat-logo.png'));
 
+    if ($('#cc-share').length === 0) {
+      $('<p id="cc-share"><a href="https://chrome.google.com/webstore/detail/cheat-club/hjhkjcpeafpacgopfeapiclffknoabfe">extension</a> ← share!</p>').insertAfter($('h1.logo'))
+    }
+
   };
 
 
@@ -143,7 +147,8 @@ var setUpCheatClubForDayWhenReady = function() {
 
   function tryInitUntilReady() {
     if ($('.menu-item').length > 0) {
-      console.log("Initalizing Cheat Club");
+      $('#cheat-club').remove();      
+      console.log("Cheat Club: Initializing");
       init();
     } else {
       window.setTimeout(tryInitUntilReady, delay);
@@ -164,7 +169,6 @@ setUpCheatClubForDayWhenReady();
 // https://developer.chrome.com/extensions/content_scripts#execution-environment
 // However, we can bind to the click of a day navigation link
 $(".header-menu-dates").bind('click', 'a', function() {
-  console.log('cheat club: navigation event');
   $('#cheat-club').remove();
   setUpCheatClubForDayWhenReady();
 });
