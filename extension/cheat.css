@@ -1,3 +1,4 @@
+/* Shrink the menu on scroll */
 header.sticky {
   height: 65px;
 }
@@ -7,11 +8,12 @@ header.sticky > .header.wrapper {
   transform-origin: top left;
 }
 
-#floatingCheckout {
+header.sticky #floatingCheckout {
   transform: scale(2);
   transform-origin: top right;
 }
 
+/* Our own UI */
 .cc-filter-table td {
   padding: 0 0.1em;
   vertical-align: middle;
